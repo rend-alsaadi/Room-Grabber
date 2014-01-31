@@ -1,0 +1,84 @@
+/**
+ * @author Rend Alsaadi
+ */
+Ext.define('RoomGrab.controller.LoginController', {
+    extend : 'Ext.app.Controller',
+
+    config : {
+        refs : {
+            popup : {
+                selector : 'formpanel #loginBox',
+                xtype : 'login',
+                autoCreate : true,
+            },
+            loginButton : 'button [action= login]',
+            email : 'field[name="username"]',
+            password : 'field[name="password"]',
+            persistLogin : 'field[name="persistLogin"]',
+            loginForm : 'login'
+
+        },
+
+        control : {
+            'button[action=openSettingsPanel]' : {
+                tap : 'showSettingsPanel'
+            },
+
+            loginButton : {
+                tap : 'onLogin'
+            },
+
+            loginForm : {
+                initilize : 'onInitialize',
+                loginResponse : 'onLoginResponse'
+            }
+        }
+    },
+
+    showSettingsPanel : function() {
+        var popup = this.getPopup();
+        Ext.Viewport.add(popup);
+        popup.show();
+    },
+
+    /*When the view is initialized, load any locally store credentials*/
+    onInitialize : function() {
+        var userLogin = Ext.getStore('UserLoginStore').load(), loginForm = this.getLoginForm();
+
+        if (userLogin && userLogin.first()) {
+            loginForm.setRecord(userLogin.first());
+        }
+    },      
+    
+    /*Logs in using the provided credentials */       
+   	onLogin: function(button){
+   		var store = Ext.getStore('UserLoginStore'), loginRequest = Ext.create('RoomGrab.model.UserLoginModel', {
+            username : this.getEmail().getValue(),//creates the login Model and passes that to the authenticate method.
+            password : this.getPassword().getValue()
+        }), errors = loginRequest.validate(), //just checks if everything is typed in correctly
+        errorString = 'Please correct the following errors before continuing:<br/>';
+
+        if (errors.isValid()) {
+            	if (persistLogin) {
+            		store.removeAll(true);
+                	store.add(Ext.create('userLogin', 
+                		{ username: username, password: password, persistLogin: true }));
+                	store.sync();
+                	} else {
+                		this.getEmail().setValue('');
+                		this.getPassword().setValue('');
+
+                		store.removeAll(true);
+                		store.sync();
+                		}
+                	
+                	this.showMain();
+                	
+     		} else {
+            Ext.each(errors.items, function(item, index) {
+                errorString += item.getMessage() + '<br/>';
+            });
+            Ext.Msg.alert('Error', errorString);
+        }
+   	}  		
+});

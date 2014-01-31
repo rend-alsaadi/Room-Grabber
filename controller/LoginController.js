@@ -1,0 +1,110 @@
+/**
+ * @author Rend Alsaadi
+ */
+Ext.define('RoomGrab.controller.LoginController', {
+    extend : 'Ext.app.Controller',
+
+    config : {
+        refs : {
+            popup : {
+                selector : 'formpanel #loginBox',
+                xtype : 'login',
+                autoCreate : true
+            },
+            loginButton : 'button[action="login"]',
+            email : 'field[name="emailaddress"]',
+            password : 'field[name="password"]',
+            username : 'field[name="username"]',
+            persistLogin : 'field[name="persistLogin"]',
+            loginForm : 'login',
+            userButton: 'button[action="openLogin"]'
+
+        },
+
+        control : {
+            'button[action=openSettingsPanel]' : {
+                tap : 'showSettingsPanel'
+            },
+
+            loginButton : {
+                tap : 'onLogin'
+            },
+
+            loginForm : {
+                initialize : 'onInitialize',
+                loginResponse : 'onLoginResponse'
+            },
+            
+            userButton: {
+            	tap: 'onOpenLogin'
+            }
+        }
+    },
+
+    onOpenLogin : function () {
+        var popup = Ext.create('RoomGrab.view.Login');
+        Ext.Viewport.add(popup);
+        popup.show();
+    },
+
+    /*When the view is initialized, load any locally store credentials*/
+    onInitialize : function () {
+        var userLogin = Ext.getStore('UserLoginStore').load(), loginForm = this.getLoginForm();
+
+        if (userLogin && userLogin.first()) {
+            loginForm.setRecord(userLogin.first());
+        }
+    },
+
+    /*Logs in using the provided credentials */
+    onLogin : function (button) {
+        var store = Ext.getStore('UserLoginStore'), loginRequest = Ext.create('RoomGrab.model.UserLoginModel', {
+            emailaddress : this.getEmail().getValue(), //creates the login Model and passes that to the authenticate method.
+            password : this.getPassword().getValue(),
+            username : this.getUsername().getValue(),
+            persistLogin : this.getPersistLogin().getValue()
+        }), errors = loginRequest.validate(), //just checks if everything is typed in correctly
+        errorString = 'Please correct the following errors before continuing:<br/>';
+
+        if (errors.isValid()) {
+            if (loginRequest.get('persistLogin')) {
+                store.removeAll(true);
+                store.add(Ext.create('userLogin', {
+                    emailaddress : loginRequest.get('emailaddress'),
+                    password : loginRequest.get('password'),
+                    username : loginRequest.get('username'),
+                    persistLogin : true
+                }));
+                store.sync();
+            } else {
+                this.getEmail().setValue('');
+                this.getPassword().setValue('');
+                this.getUsername().setValue('');
+
+                store.removeAll(true);
+                store.sync();
+            }
+
+            var popup = this.getPopup();
+            popup.destroy();
+
+        } else {
+            Ext.each(errors.items, function(item, index) {
+                errorString += item.getMessage() + '<br/>';
+            });
+            Ext.Msg.alert('Error', errorString);
+        }
+        this.showMain();
+        Ext.getStore('conferenceroomlivestore').removeAll(); 
+        Ext.getStore('conferenceroomlivestore').getRooms();
+    },
+
+    showMain : function() {
+        var main = Ext.create('RoomGrab.view.Main');
+        Ext.Viewport.add(main);
+        main.show();
+
+        var pnl = this.getLoginForm();
+        pnl.destroy();
+    }
+});
