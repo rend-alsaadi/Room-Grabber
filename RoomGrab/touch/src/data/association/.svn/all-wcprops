@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/RoomGrab/!svn/ver/15/trunk/mobileUI/source/touch/src/data/association
+END
+Association.js
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/RoomGrab/!svn/ver/15/trunk/mobileUI/source/touch/src/data/association/Association.js
+END
+BelongsTo.js
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/RoomGrab/!svn/ver/15/trunk/mobileUI/source/touch/src/data/association/BelongsTo.js
+END
+HasOne.js
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/RoomGrab/!svn/ver/15/trunk/mobileUI/source/touch/src/data/association/HasOne.js
+END
+HasMany.js
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/RoomGrab/!svn/ver/15/trunk/mobileUI/source/touch/src/data/association/HasMany.js
+END

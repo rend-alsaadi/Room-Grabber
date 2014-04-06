@@ -1,0 +1,147 @@
+/*
+    This file is generated and updated by Sencha Cmd. You can edit this file as
+    needed for your application, but these edits will have to be merged by
+    Sencha Cmd when it performs code generation tasks such as generating new
+    models, controllers or views and when running "sencha app upgrade".
+
+    Ideally changes to this file would be limited and most work would be done
+    in other places (such as Controllers). If Sencha Cmd cannot merge your
+    changes and its generated code, it will produce a "merge conflict" that you
+    will need to resolve manually.
+*/
+Ext.Loader.setConfig({
+    enabled: true,
+    paths: {
+        Ext		      : 'touch/src',
+        'Ext.ux.'     : 'touch/src/ux'
+    }
+});
+
+
+Ext.application({
+    name: 'RoomGrab',
+    
+    //add on to help with touch sensitivity in app. 
+    eventPublishers: {
+    	touchGesture: {
+    		recognizers: {
+    			tap: {
+    				xclass: 'Ext.event.recognizer.Tap',
+    				moveDistance: 20
+    			}
+    		}
+    	}
+    },
+
+    requires: [
+        'Ext.MessageBox',
+        'RoomGrab.util.Config',
+        'Ext.ux.TouchCalendarEventsBase',
+        'Ext.ux.TouchCalendarMonthEvents',
+        'Ext.ux.TouchCalendarWeekEvents',
+        'Ext.ux.TouchCalendarDayEvents',
+        'Ext.ux.TouchCalendarEvents',
+        'Ext.ux.TouchCalendarSimpleEvents',
+        'Ext.ux.TouchCalendarView',
+        'Ext.ux.TouchCalendar'        
+    ],
+
+    views: [
+        'RoomGrab.view.Main',
+        'RoomGrab.view.ConferenceRoomList',
+        'RoomGrab.view.ConferenceRoomDetail',
+        'RoomGrab.view.ConferenceRoomCalendarView',
+        'RoomGrab.view.Login',
+        'RoomGrab.view.QuickReserve'
+    ],
+    
+    controllers: [
+    	'ConferenceRoomController',
+    	'LoginController'
+    ],
+    
+    stores: [
+        'RoomGrab.store.CalendarEventsStore',
+    	'RoomGrab.store.ConferenceRoomLiveStore',
+    	'RoomGrab.store.UserLoginStore'
+    ],
+    
+    models: [
+    	'RoomGrab.model.ConferenceRoomModel',
+    	'RoomGrab.model.CalendarEventsModel',
+    	'RoomGrab.model.UserLoginModel'
+    ],
+
+    icon: {
+        '57': 'resources/icons/Icon.png',
+        '72': 'resources/icons/Icon~ipad.png',
+        '114': 'resources/icons/Icon@2x.png',
+        '144': 'resources/icons/Icon~ipad@2x.png',
+        '57': 'resources/icons/padlock_closed.png'
+    },
+
+    isIconPrecomposed: true,
+
+    startupImage: {
+        '320x460': 'resources/startup/320x460.jpg',
+        '640x920': 'resources/startup/640x920.png',
+        '768x1004': 'resources/startup/768x1004.png',
+        '748x1024': 'resources/startup/748x1024.png',
+        '1536x2008': 'resources/startup/1536x2008.png',
+        '1496x2048': 'resources/startup/1496x2048.png'
+    },
+
+    launch: function() {
+        // Destroy the #appLoadingIndicator element
+        Ext.fly('appLoadingIndicator').destroy();
+
+
+        Ext.Ajax.on('beforerequest', function (con, opt) {
+            //To show the mask
+            Ext.Viewport.setMasked({
+                xtype: 'loadmask',
+                message: 'Please wait...'
+            });
+        }, this);
+
+        //Fires if the request was successfully completed and hide the mask.
+        Ext.Ajax.on('requestcomplete', function (con, res, opt) {
+
+            //To hide the mask
+
+            Ext.Viewport.setMasked(false);
+
+        }, this);
+
+        //Fires if an error HTTP status was returned from the server  and hide the mask.
+        Ext.Ajax.on('requestexception', function (con, response, opt) {
+            var itemLength;
+
+            //To hide the mask
+
+            Ext.Viewport.setMasked(false);
+
+            if (response.status == 401) {
+                Ext.Viewport.add(Ext.create('RoomGrab.view.Login'));
+            } else {
+                Ext.Msg.alert('Error', response.responseText);
+            }
+
+        }, this);
+
+        // Initialize the main view
+        Ext.Viewport.add(Ext.create('RoomGrab.view.Login'));
+    },
+
+    onUpdated: function() {
+        Ext.Msg.confirm(
+            "Application Update",
+            "This application has just successfully been updated to the latest version. Reload now?",
+            function(buttonId) {
+                if (buttonId === 'yes') {
+                    window.location.reload();
+                }
+            }
+        );
+    }
+});

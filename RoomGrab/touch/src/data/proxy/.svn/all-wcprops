@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/RoomGrab/!svn/ver/15/trunk/mobileUI/source/touch/src/data/proxy
+END
+Server.js
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/RoomGrab/!svn/ver/15/trunk/mobileUI/source/touch/src/data/proxy/Server.js
+END
+Memory.js
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/RoomGrab/!svn/ver/15/trunk/mobileUI/source/touch/src/data/proxy/Memory.js
+END
+SessionStorage.js
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/RoomGrab/!svn/ver/15/trunk/mobileUI/source/touch/src/data/proxy/SessionStorage.js
+END
+JsonP.js
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/RoomGrab/!svn/ver/15/trunk/mobileUI/source/touch/src/data/proxy/JsonP.js
+END
+Direct.js
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/RoomGrab/!svn/ver/15/trunk/mobileUI/source/touch/src/data/proxy/Direct.js
+END
+Rest.js
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/RoomGrab/!svn/ver/15/trunk/mobileUI/source/touch/src/data/proxy/Rest.js
+END
+Client.js
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/RoomGrab/!svn/ver/15/trunk/mobileUI/source/touch/src/data/proxy/Client.js
+END
+LocalStorage.js
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/RoomGrab/!svn/ver/15/trunk/mobileUI/source/touch/src/data/proxy/LocalStorage.js
+END
+Sql.js
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/RoomGrab/!svn/ver/15/trunk/mobileUI/source/touch/src/data/proxy/Sql.js
+END
+Proxy.js
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/RoomGrab/!svn/ver/15/trunk/mobileUI/source/touch/src/data/proxy/Proxy.js
+END
+WebStorage.js
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/RoomGrab/!svn/ver/15/trunk/mobileUI/source/touch/src/data/proxy/WebStorage.js
+END
+Ajax.js
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/RoomGrab/!svn/ver/15/trunk/mobileUI/source/touch/src/data/proxy/Ajax.js
+END

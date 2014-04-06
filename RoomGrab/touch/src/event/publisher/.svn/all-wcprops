@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/RoomGrab/!svn/ver/15/trunk/mobileUI/source/touch/src/event/publisher
+END
+ElementSize.js
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/RoomGrab/!svn/ver/15/trunk/mobileUI/source/touch/src/event/publisher/ElementSize.js
+END
+ElementPaint.js
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/RoomGrab/!svn/ver/15/trunk/mobileUI/source/touch/src/event/publisher/ElementPaint.js
+END
+ComponentSize.js
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/RoomGrab/!svn/ver/15/trunk/mobileUI/source/touch/src/event/publisher/ComponentSize.js
+END
+Publisher.js
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/RoomGrab/!svn/ver/15/trunk/mobileUI/source/touch/src/event/publisher/Publisher.js
+END
+ComponentDelegation.js
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/RoomGrab/!svn/ver/15/trunk/mobileUI/source/touch/src/event/publisher/ComponentDelegation.js
+END
+ComponentPaint.js
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/RoomGrab/!svn/ver/15/trunk/mobileUI/source/touch/src/event/publisher/ComponentPaint.js
+END
+Dom.js
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/RoomGrab/!svn/ver/15/trunk/mobileUI/source/touch/src/event/publisher/Dom.js
+END
+TouchGesture.js
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/RoomGrab/!svn/ver/15/trunk/mobileUI/source/touch/src/event/publisher/TouchGesture.js
+END

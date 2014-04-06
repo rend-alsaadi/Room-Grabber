@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/RoomGrab/!svn/ver/15/trunk/mobileUI/source/touch/src/direct
+END
+JsonProvider.js
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/RoomGrab/!svn/ver/15/trunk/mobileUI/source/touch/src/direct/JsonProvider.js
+END
+RemotingMethod.js
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/RoomGrab/!svn/ver/15/trunk/mobileUI/source/touch/src/direct/RemotingMethod.js
+END
+Transaction.js
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/RoomGrab/!svn/ver/15/trunk/mobileUI/source/touch/src/direct/Transaction.js
+END
+RemotingEvent.js
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/RoomGrab/!svn/ver/15/trunk/mobileUI/source/touch/src/direct/RemotingEvent.js
+END
+Manager.js
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/RoomGrab/!svn/ver/15/trunk/mobileUI/source/touch/src/direct/Manager.js
+END
+Provider.js
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/RoomGrab/!svn/ver/15/trunk/mobileUI/source/touch/src/direct/Provider.js
+END
+PollingProvider.js
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/RoomGrab/!svn/ver/15/trunk/mobileUI/source/touch/src/direct/PollingProvider.js
+END
+RemotingProvider.js
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/RoomGrab/!svn/ver/15/trunk/mobileUI/source/touch/src/direct/RemotingProvider.js
+END
+ExceptionEvent.js
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/RoomGrab/!svn/ver/15/trunk/mobileUI/source/touch/src/direct/ExceptionEvent.js
+END
+Event.js
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/RoomGrab/!svn/ver/15/trunk/mobileUI/source/touch/src/direct/Event.js
+END

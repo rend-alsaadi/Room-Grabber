@@ -1,0 +1,110 @@
+// The following two lines import the default Sencha Touch theme. If you are building
+// a new theme, remove them and the add your own CSS on top of the base CSS (which
+// is already included in your app.json file).
+@import 'sencha-touch/default';
+@import 'sencha-touch/default/all';
+
+@include icon-font ('IcoMoon', inline-font-files('pictos/icomoon.woff', 
+woff, 'pictos/icomoon.ttf', truetype, 'pictos/icomoon.svg', svg));
+
+@include icon('lock', '!', 'IcoMoon'); 
+
+
+$list-padding: .7em; 
+
+body {
+    background: #eee;
+}
+
+.conference-list {
+  font-size: 15px; 
+    .x-dataview-inner {
+        padding: $list-padding;
+    }
+    
+    .conference-list-item {
+        padding: $list-padding/2;
+        background: #fff;
+        border: 1px solid #ccc;
+        border-bottom-width: 0;
+
+        //add rounded corners to the last item
+        &:last-child {
+            border-bottom-width: 1px;
+            @include border-bottom-radius($list-padding/2);
+        }
+    }
+    
+    .x-mask + .conference-list-item {
+        @include border-top-radius($list-padding/2);
+    }
+} 
+
+@mixin inline-icon-after($name, $font-family: 'Pictos') {
+  $character: icon-character-for-name($name);
+
+  &:after {
+      @include absolute-position;
+      text-align: center;
+      font-family: $font-family;
+
+      @if $character {
+          content: "#{$character}";
+      } @else {
+          content: "#{$name}";
+      }
+  }
+}
+
+// icons from - http://druckit.wordpress.com/2013/04/04/changes-to-sencha-touch-2-2-theming-part-1-using-iconography/
+// and http://www.sencha.com/blog/new-themes-in-sencha-touch-2-2
+.free:before {
+  color: #080;
+  font-family: 'Pictos';
+  text-align: center;
+  content: "3";
+  margin-right: 1em;
+}
+
+.busy:before {
+  color: #800;
+  font-family: 'Pictos';
+  text-align: center;
+  content: "*";
+  margin-right: 1em; 
+}
+
+.x-list .x-list-disclosure {
+  width: 24px; 
+  height: 24px; 
+}
+
+.x-list .x-list-disclosure:before{
+  width: 24px; 
+  height: 24px; 
+  font-size: 16px; 
+  line-height: 27px;
+}
+
+.x-toolbar .x-button .x-button-label {
+  line-height: 2.6em; 
+}
+
+.x-input-el {
+  padding: .3em;
+  min-height: 2.8em;
+}
+
+.loginbutton {
+  margin-left: 25%;
+}
+
+.login {
+  padding: 3px; 
+}
+
+
+    
+.x-form-fieldset-title {
+	padding: 0 !important;
+} 

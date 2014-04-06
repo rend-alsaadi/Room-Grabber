@@ -1,0 +1,65 @@
+/**
+ * @author Rend Alsaadi
+ */
+/**
+ * @author Rend Alsaadi
+ */
+Ext.define('RoomGrab.view.ConferenceRoomList', {
+<<<<<<< .mine
+	extend: 'Ext.List',
+    requires: ['RoomGrab.store.ConferenceRoomLiveStore'],
+=======
+    extend : 'Ext.dataview.List',
+    xtype : 'conferenceroomlist',
+>>>>>>> .r63
+
+<<<<<<< .mine
+    xtype: 'conferenceroomlist',
+    config: {
+        itemTpl: '{roomName}',
+        store: 'conferenceroomlivestore'
+        
+=======
+    config : {
+        allowDeselect: true,
+        cls : 'conference-list',
+        store: 'conferenceroomlivestore',
+        itemTpl: new Ext.XTemplate(
+            '<div><span class="{[this.getFreeBusy(values.free)]}">{roomName}</span></div>',
+            {
+                getFreeBusy: function (free) {
+                    if (free) {
+                        return 'free';
+                    } else {
+                        return 'busy';
+                    }
+                }
+            }    
+        ),
+        onItemDisclosure: true,
+        preventSelectionOnDisclose: true,
+        items: [
+            {
+                xtype: 'toolbar',
+                docked: 'top',
+                ui: 'neutral',
+                layout: {
+                    align: 'right'
+                },
+                items: [
+                    {
+                      xtype: 'spacer',
+                      flex: 1  
+                    },
+                    { 
+                        xtype: 'button',
+                        action: 'quickReserve',
+                        text: 'Reserve',
+                        disabled: true
+                    }
+                ]
+            }
+        ]
+>>>>>>> .r63
+    }
+});

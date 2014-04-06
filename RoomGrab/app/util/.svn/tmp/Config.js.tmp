@@ -1,0 +1,18 @@
+/**
+ * @author Rend Alsaadi
+ */
+Ext.define('RoomGrab.util.Config', {
+	singleton: true, 
+	
+	config: {
+		webserviceURL: 'http://10.10.10.88/roomgrabberservices/api/'
+	},
+	
+	constructor: function (config) {
+        this.initConfig(config);
+
+        this.callParent([config]);
+    }
+	
+});
+//blah

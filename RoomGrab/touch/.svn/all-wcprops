@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/RoomGrab/!svn/ver/63/trunk/mobileUI/source/touch
+END
+license.txt
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/RoomGrab/!svn/ver/12/trunk/mobileUI/source/touch/license.txt
+END
+sencha-touch-debug.js
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/RoomGrab/!svn/ver/12/trunk/mobileUI/source/touch/sencha-touch-debug.js
+END
+sencha-touch-all.js
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/RoomGrab/!svn/ver/12/trunk/mobileUI/source/touch/sencha-touch-all.js
+END
+file-header.txt
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/RoomGrab/!svn/ver/12/trunk/mobileUI/source/touch/file-header.txt
+END
+version.txt
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/RoomGrab/!svn/ver/15/trunk/mobileUI/source/touch/version.txt
+END
+sencha-touch-all-debug.js
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/RoomGrab/!svn/ver/12/trunk/mobileUI/source/touch/sencha-touch-all-debug.js
+END
+sencha-touch.js
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/RoomGrab/!svn/ver/12/trunk/mobileUI/source/touch/sencha-touch.js
+END
+build.xml
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/RoomGrab/!svn/ver/12/trunk/mobileUI/source/touch/build.xml
+END

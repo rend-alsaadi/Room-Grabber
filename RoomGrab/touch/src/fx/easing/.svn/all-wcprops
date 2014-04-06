@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/RoomGrab/!svn/ver/15/trunk/mobileUI/source/touch/src/fx/easing
+END
+EaseIn.js
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/RoomGrab/!svn/ver/15/trunk/mobileUI/source/touch/src/fx/easing/EaseIn.js
+END
+EaseOut.js
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/RoomGrab/!svn/ver/15/trunk/mobileUI/source/touch/src/fx/easing/EaseOut.js
+END
+BoundMomentum.js
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/RoomGrab/!svn/ver/15/trunk/mobileUI/source/touch/src/fx/easing/BoundMomentum.js
+END
+Linear.js
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/RoomGrab/!svn/ver/15/trunk/mobileUI/source/touch/src/fx/easing/Linear.js
+END
+Bounce.js
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/RoomGrab/!svn/ver/15/trunk/mobileUI/source/touch/src/fx/easing/Bounce.js
+END
+Momentum.js
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/RoomGrab/!svn/ver/15/trunk/mobileUI/source/touch/src/fx/easing/Momentum.js
+END
+Abstract.js
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/RoomGrab/!svn/ver/15/trunk/mobileUI/source/touch/src/fx/easing/Abstract.js
+END

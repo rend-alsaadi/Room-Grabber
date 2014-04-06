@@ -1,0 +1,60 @@
+/**
+ * @author Rend Alsaadi
+ */
+Ext.define('RoomGrab.view.QuickReserve', {
+    extend : 'Ext.form.Panel',
+    xtype : 'quickreserve',
+    alias : 'widget.QuickReservePanel',
+
+    requires : ['Ext.field.DatePicker', 'Ext.ux.picker.DateTime', 'Ext.DateExtras'],
+
+    config : {
+        cls : 'quickreserve',
+        title : 'Quick Reserve',
+        itemId : 'quickReserveBox',
+        floating : true,
+        centered : true,
+        modal : true,
+        height : 400,
+        width : 500,
+
+        items : [{
+            xtype : 'label',
+            html : 'value'
+        }, {
+            xtype : 'fieldset',
+            //title: this.getParent(),
+            items : [{
+                xtype : 'datepickerfield',
+                label : 'Select Date:',
+                name : 'reserveDate',
+                value : new Date()
+            }, {
+                xtype : 'datetimepickerfield',
+                name : '12hr',
+                label : 'Select Time',
+                value : new Date(),
+                dateTimeFormat : 'h:i:A',
+                picker : {
+                    yearFrom : 1980,
+                    minuteInterval : 10,
+                    ampm : true,
+                    slotOrder : ['hour', 'minute', 'ampm']
+                }
+            }]
+        }, {
+            xtype : 'button',
+            ui : 'round',
+            padding : '10px',
+            action : 'quickReserveRoom',
+            text : 'Reserve'
+        }, {
+            xtype : 'button',
+            ui : 'round',
+            padding : '10px',
+            action : 'cancelQuickReserve',
+            text : 'Cancel'
+        }]
+    }
+
+});

@@ -1,0 +1,83 @@
+/**
+ * @author Rend Alsaadi
+ */
+Ext.define('RoomGrab.store.CalendarEventsStore', {
+
+    extend : 'Ext.data.Store',
+
+    requires : [
+        'RoomGrab.model.CalendarEventsModel',
+        'RoomGrab.model.UserLoginModel'
+    ],
+    config : {
+        storeId : 'calendareventsstore',
+        model : 'RoomGrab.model.CalendarEventsModel',
+        proxy : {
+            type : 'ajax',
+            enablePagingParams : false,
+            noCache : false,
+            reader : {
+                type : 'json'
+            }
+        }
+    },
+
+    constructor : function(config) {
+        this.callParent(arguments);
+    },
+
+    getRoomInfo : function(duration, startTime, endTime, roomAddresses) {
+        var me = this,
+            user = Ext.getStore('UserLoginStore').first(),
+            roomRequest = {
+<<<<<<< .mine
+    		    organizerAddress: user.get('emailaddress'),
+    		    password: user.get('password'),
+    		    organizerUserName: user.get('username'),
+    		    duration: duration, 
+    		    startTime: startTime,
+    		    endTime: endTime, 
+    		    roomAddresses: [roomAddresses], 
+    		    
+    	    };
+    	    
+    	    Ext.Ajax.request({
+    	    url: 'http://10.10.10.88/roomgrabberservices/postapi/Room/GetRoomInfo' ,  
+            noCache: false,
+    		jsonData:  roomRequest,
+    		method: 'POST',
+    		headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': 'Basic ' + window.btoa('anexinet\\RAlsaadi:@nexinetRA') 
+                    },
+    		success: function (response) { 
+    			console.log(response);
+    		}
+    	});
+    }
+=======
+                organizerAddress : user.get('emailaddress'),
+                password : user.get('password'),
+                organizerUserName : user.get('username'),
+                duration : duration,
+                startTime : startTime,
+                endTime : endTime,
+                roomAddresses : roomAddresses
+            };
+>>>>>>> .r50
+
+        Ext.Ajax.request({
+            url : RoomGrab.util.Config.getWebserviceURL() + '/postapi/Room/GetRoomInfo',
+            noCache : false,
+            jsonData : roomRequest,
+            method : 'POST',
+            headers : {
+                'Content-Type' : 'application/json',
+                'Authorization' : 'Basic ' + window.btoa(user.get('username') + ':' + user.get('password'))
+            },
+            success : function (response) {
+                console.dir(response);
+            }
+        });
+    }
+});

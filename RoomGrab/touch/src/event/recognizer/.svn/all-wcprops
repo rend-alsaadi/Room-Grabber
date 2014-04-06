@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/RoomGrab/!svn/ver/15/trunk/mobileUI/source/touch/src/event/recognizer
+END
+SingleTouch.js
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/RoomGrab/!svn/ver/15/trunk/mobileUI/source/touch/src/event/recognizer/SingleTouch.js
+END
+Tap.js
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/RoomGrab/!svn/ver/15/trunk/mobileUI/source/touch/src/event/recognizer/Tap.js
+END
+Recognizer.js
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/RoomGrab/!svn/ver/15/trunk/mobileUI/source/touch/src/event/recognizer/Recognizer.js
+END
+Swipe.js
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/RoomGrab/!svn/ver/15/trunk/mobileUI/source/touch/src/event/recognizer/Swipe.js
+END
+EdgeSwipe.js
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/RoomGrab/!svn/ver/15/trunk/mobileUI/source/touch/src/event/recognizer/EdgeSwipe.js
+END
+LongPress.js
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/RoomGrab/!svn/ver/15/trunk/mobileUI/source/touch/src/event/recognizer/LongPress.js
+END
+Drag.js
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/RoomGrab/!svn/ver/15/trunk/mobileUI/source/touch/src/event/recognizer/Drag.js
+END
+MultiTouch.js
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/RoomGrab/!svn/ver/15/trunk/mobileUI/source/touch/src/event/recognizer/MultiTouch.js
+END
+Rotate.js
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/RoomGrab/!svn/ver/15/trunk/mobileUI/source/touch/src/event/recognizer/Rotate.js
+END
+DoubleTap.js
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/RoomGrab/!svn/ver/15/trunk/mobileUI/source/touch/src/event/recognizer/DoubleTap.js
+END
+HorizontalSwipe.js
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/RoomGrab/!svn/ver/15/trunk/mobileUI/source/touch/src/event/recognizer/HorizontalSwipe.js
+END
+Pinch.js
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/RoomGrab/!svn/ver/15/trunk/mobileUI/source/touch/src/event/recognizer/Pinch.js
+END
+VerticalSwipe.js
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/RoomGrab/!svn/ver/15/trunk/mobileUI/source/touch/src/event/recognizer/VerticalSwipe.js
+END
+Touch.js
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/RoomGrab/!svn/ver/15/trunk/mobileUI/source/touch/src/event/recognizer/Touch.js
+END
